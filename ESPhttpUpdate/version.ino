@@ -1,6 +1,5 @@
 /*
   version.ino
-  created 31 07 2021
   by Luiz H. Cassettari
 */
 

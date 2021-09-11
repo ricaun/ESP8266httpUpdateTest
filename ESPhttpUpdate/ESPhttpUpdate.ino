@@ -1,15 +1,12 @@
-// ------------------- //
-// ESPhttpUpdate
-// ------------------- //
+/*
+  ESPhttpUpdate.ino
+  by Luiz H. Cassettari
+*/
 
 #include <ESP8266WiFi.h>
 
 const char* ssid          = "";
 const char* password      = "";
-
-const char* httpServerBin = "https://raw.githubusercontent.com/ricaun/ESP8266httpUpdateTest/main/update.bin2";
-
-// https://stackoverflow.com/questions/62333061/how-i-do-an-esp8266-httpupdate-via-private-github-repository
 
 void setup() {
   Serial.begin(115200);
@@ -38,16 +35,11 @@ void wifi_setup() {
   Serial.println("Local IP address: " + WiFi.localIP().toString());
 }
 
-
-
 void loop() {
   if (runEvery(5000)) {
     UpdateVersion();
-    //ESPhttpUpdateRun();
   }
 }
-
-
 
 boolean runEvery(unsigned long interval)
 {
