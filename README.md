@@ -27,7 +27,6 @@ The version value is compare with the define on the `version.ino`.
 
 If the value is below the `json` file, the ESP8266 try to update the firmware using the link on the `update` variable.
 
-
 ### HTTPS
 
 To make the `https` links to work with the ESP8266 the `client` was set like below.
