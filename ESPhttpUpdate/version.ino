@@ -16,7 +16,7 @@
 
 #define VERSION 1.01
 
-const char * urlPool = "https://raw.githubusercontent.com/ricaun/ESP8266httpUpdateTest/main/update.json";
+const char * urlVersion = "https://raw.githubusercontent.com/ricaun/ESP8266httpUpdateTest/main/update.json";
 
 void DecodeJsonVersion(String input)
 {
@@ -37,7 +37,7 @@ void DecodeJsonVersion(String input)
 
 void UpdateVersion()
 {
-  String input = httpGetString(urlPool);
+  String input = httpGetString(urlVersion);
   if (input == "") return;
   DecodeJsonVersion(input);
 }
