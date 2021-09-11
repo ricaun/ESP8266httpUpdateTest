@@ -6,7 +6,7 @@ This is a simple project to test the ESP8266httpUpdate library with Github as a 
 
 The ESP8266 check the file `update.json` in this repository using the link below.
 
-```arduino
+```c#
 const char * urlVersion = "https://raw.githubusercontent.com/ricaun/ESP8266httpUpdateTest/main/update.json";
 ```
 
@@ -21,7 +21,7 @@ The resquest return something like this:
 
 The version value is compare with the define on the `version.ino`.
 
-```arduino
+```c#
 #define VERSION 1.01
 ```
 
@@ -31,7 +31,7 @@ If the value is below the `json` file, the ESP8266 try to update the firmware us
 
 To make the `https` links to work with the ESP8266 the `client` was set like below.
 
-```arduino
+```c#
 WiFiClientSecure client;
 client.setInsecure();
 ```
